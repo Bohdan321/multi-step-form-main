@@ -128,8 +128,7 @@ aside.side-bar section.side-bar__step-item h4 {
 }
 
 section.form__section-step {
-  -webkit-animation: fix 0.5s ease-in;
-          animation: fix 0.5s ease-in;
+  animation: fix 0.5s ease-in;
   display: none;
 }
 section.form__section-step > p {
@@ -137,15 +136,6 @@ section.form__section-step > p {
 }
 section.form__section-step.active-step {
   display: block;
-}
-
-@-webkit-keyframes fix {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes fix {
@@ -178,10 +168,6 @@ section.form__section-step.active-step {
   font-weight: 500;
 }
 .form__input-item input::-moz-placeholder {
-  color: var(--CoolGray);
-  font-weight: 400;
-}
-.form__input-item input:-ms-input-placeholder {
   color: var(--CoolGray);
   font-weight: 400;
 }
@@ -514,7 +500,7 @@ section.form__section-step.active-step {
 /* BUTTONS: */
 .button-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   background-color: var(--White);
