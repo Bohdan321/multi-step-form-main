@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <aside class="side-bar">
+      <!-- Sidebar start -->
+
+      <section class="side-bar__step-item active-step " >
+        <span class="side-bar__circle active-step" data-index="0">1</span>
+        <div class="side-bar__info-item">
+          <p>Step 1</p>
+          <h4>Your info</h4>
+        </div>
+      </section>
+
+      <section class="side-bar__step-item " >
+        <span class="side-bar__circle" data-index="1">2</span>
+        <div class="side-bar__info-item">
+          <p>Step 2</p>
+          <h4>Select plan</h4>
+        </div class="side-bar__info-item">
+      </section>
+
+      <section class="side-bar__step-item " >
+        <span class="side-bar__circle" data-index="2">3</span>
+        <div class="side-bar__info-item">
+          <p>Step 3</p>
+          <h4>Add-ons</h4>
+        </div>
+      </section>
+
+      <section class="side-bar__step-item ">
+        <span class="side-bar__circle" data-index="3">4</span>
+        <div class="side-bar__info-item">
+          <p>Step 4</p>
+          <h4>Summary</h4>
+        </div>
+      </section>
+
+      <!-- Sidebar end -->
+    </aside>
+    <main class="main">
+      <!-- Step 1 start -->
+      <form action="#" class="rg-form" id="main-form" novalidate >
+        <section class="form__section-step active-step" data-index="1">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <div class="form__input-item">
+            <label for="user-name">Name</label>
+            <input type="text" class="input-first " id="user-name" placeholder="e.g. Stephen King"></input>
+            <span class="message-required">This field is required</span>
+          </div>
+          <div class="form__input-item">
+            <label for="user-email">Email Address</label>
+            <input type="email" class="input-first " id="user-email" placeholder="e.g. stephenking@lorem.com"></input>
+            <span class="message-required">This field is required</span>
+          </div>
+          <div class="form__input-item">
+            <label for="user-tel">Phone Number</label>
+            <input type="tel" class="input-first " id="user-tel" placeholder="e.g. +1 234 567 890"></input>
+            <span class="message-required">This field is required</span>
+          </div>
+        </section>
+        <!-- Step 1 end -->
+        <!-- Step 2 start -->
+        <section class="form__section-step " data-index="2">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+          <div class="form__plan-container">
+            <section class="form__billing-card">
+              <img src="./assets/images/icon-arcade.svg" alt="icon-arcade">
+              <input type="radio" name="plan" id="arcade" checked value="9" data-value="9" data-name="Arcade">
+              <div class="plan-folder">
+                <label for="arcade">Arcade</label>
+                <p class="form__plan-price">$9/mo</p>
+                <p class="free-months no-active">2 month free</p>
+              </div>
+            </section>
+            <section class="form__billing-card">
+              <img src="./assets/images/icon-advanced.svg" alt="icon-advanced" srcset="">
+              <input type="radio" name="plan" id="advanced" value="12" data-value="12" data-name="Advanced">
+              <div class="plan-folder">
+                <label for="advanced">Advanced</label>
+                <p class="form__plan-price">$12/mo</p>
+                <p class="free-months no-active">2 month free</p>
+              </div>
+            </section>
+            <section class="form__billing-card">
+              <img src="./assets/images/icon-pro.svg" alt="icon-pro" srcset="">
+              <input type="radio" name="plan" id="pro" value="15" data-value="15" data-name="Pro">
+              <div class="plan-folder">
+                <label for="pro">Pro</label>
+                <p class="form__plan-price">$15/mo</p>
+                <p class="free-months no-active">2 month free</p>
+              </div>
+            </section>
+          </div>
+          <div class="form__toggle-switch-menu">
+            <h4 id="selected-monthly">Monthly</h4>
+            <label for="toggle-switcher" id="id-switcher" class="form__btn-switch">
+              <input type="checkbox" id="toggle-switcher" name="toggle-switcher" data-billing="Monthly"
+                aria-label="toggle-switcher">
+              <span class="slider round"></span>
+            </label>
+            <h4 class="passive-value" id="selected-yearly">Yearly</h4>
+          </div>
+        </section> 
+        <!-- Step 2 end -->
+        <!-- Step 3 start -->
+        <section class="form__section-step " data-index="3">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+          <section class="form__add-on-card">
+            <input type="checkbox" name="add-on-checkmark" id="online-service" value="1" data-name="Online service" data-value="1">
+            <div class="add-on-card__info">
+              <label for="online-service" name="add-on-name">Online service</label>
+              <p>Access to multiplayer games</p>
+            </div>
+            <p class="add-on-price">+$1/mo</p>
+          </section>
+          <section class="form__add-on-card">
+            <input type="checkbox" name="add-on-checkmark" id="larger-storage" value="2" data-name="Larger storage" data-value="2">
+            <div class="add-on-card__info">
+              <label for="larger-storage" name="add-on-name">Larger storage</label>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <p class="add-on-price">+$2/mo</p>
+          </section>
+          <section class="form__add-on-card">
+            <input type="checkbox" name="add-on-checkmark" id="customizable-profile" value="2" data-name="Customizable Profile" data-value="2">
+            <div class="add-on-card__info">
+              <label for="customizable-profile" name="add-on-name">Customizable Profile</label>
+              <p>Custom theme on your profile</p>
+            </div>
+            <p class="add-on-price">+$2/mo</p>
+          </section>
+        </section>
+        <!-- Step 3 end -->
+        <!-- Step 4 start -->
+        <section class="form__section-step " data-index="4">
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming.</p>
+          <div class="form__final-container">
+            <div class="plan__header-table">
+              <div class="plan__details">
+                <h4 class="plan__name" id="plan-id">Arcade (Monthly)<h4>
+                    <button type="button" class="plan__change-button" id="plan-change">Change</button>
+              </div>
+              <h4 class="plan-price" id="plan-price-id">$9/mo</h4>
+            </div>
+            <div class="final__addons-container">
+
+              <!-- <div class="final__addon-item">
+                <h5 class="final__addon-name">Online service</h5>
+                <p class="final__addon-price">+$1/mo</p>
+              </div>
+              <div class="final__addon-item">
+                <h5 class="final__addon-name">Larger storage</h5>
+                <p class="final__addon-price">+$2/mo</p>
+              </div>
+              <div class="final__addon-item">
+                <h5 class="final__addon-name">Customizable profile</h5>
+                <p class="final__addon-price">+$2/mo</p>
+              </div>
+            </div> -->
+
+          </div>
+          <div class="final__total-payments">
+            <h5 class="final__total-name">Total (per month)</h5>
+            <p class="final__total-price">+$14/mo</p>
+          </div>
+          <!-- Dynamically add subscription and add-on selections here -->
+        </section>
+        <!-- Step 4 end -->
+        <!-- Step 5 start -->
+        <section class="form__section-step " data-index="5">
+          <div class="form__thank-you-container">
+            <img src="./assets/images/icon-thank-you.svg" alt="thank-you.svg" srcset="">
+            <h1>Thank you!</h1>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </p>
+          </div>
+        </section>
+        <!-- Step 5 end -->
+        <div class="button-container">
+          <button type="button" class="button-back visible" id="back-button">Go Back</button>
+          <button type="button" class="button-next visible" id="next-button">Next Step</button>
+          <button type="submit" class="button-confirm" id="confirm-button">Confirm</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      rel="noopener noreferrer">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
