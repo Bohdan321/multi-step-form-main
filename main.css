@@ -562,8 +562,10 @@ button.visible {
   }
   div.wrapper {
     width: clamp(750px, 85%, 1000px);
+    aspect-ratio: 3/2;
+    min-height: 39rem;
     flex-direction: row;
-    margin: 1rem auto;
+    margin: 4rem auto;
     padding: 1rem;
     border-radius: 1rem;
     background-color: var(--White);
@@ -603,11 +605,19 @@ button.visible {
   .main {
     margin: auto auto auto auto;
     padding-left: 1rem;
-    max-width: 60%;
+    position: relative;
+    max-width: 62%;
+    min-height: 95%;
     background-color: transparent;
   }
   form.rg-form {
-    margin: 1.5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 2rem;
+    margin: 3.5rem auto 0 auto;
     width: 90%;
     min-height: 80%;
     padding: 0;
@@ -646,7 +656,8 @@ button.visible {
   /* BUTTONS screen>750px */
   .button-container {
     background-color: var(--White);
-    margin: 3rem auto;
+    margin: auto auto 0 auto;
+    position: relative;
   }
   .attribution {
     margin-top: 3rem;
